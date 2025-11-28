@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aboxyn - System do zarządzania zamówieniami e-commerce dla firm meblarskich. Wysyłka jednym kliknięciem dzięki szablonom paczek. Integracje z Allegro, Erli, Shopify i kurierami.">
-    <meta name="keywords" content="system zamówień e-commerce, meble online, zarządzanie magazynem, integracja Allegro, InPost, DPD, faktury">
+    <meta name="keywords" content="system zamówień e-commerce, system dla firm meblarskich, zarządzanie zamówieniami meble, automatyzacja wysyłki mebli, szablony paczek, integracja Allegro meble, integracja Erli, integracja Shopify, InPost integracja, DPD integracja, Geis kurier, automatyczne faktury Fakturownia, zarządzanie magazynem meble, system WMS meble, oprogramowanie dla firm meblarskich, e-commerce meble polska, sprzedaż mebli online">
     <meta name="theme-color" content="#9333ea">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Aboxyn">
+    <meta name="language" content="Polish">
+    <meta name="geo.region" content="PL">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Aboxyn - System zamówień e-commerce dla firm meblarskich">
@@ -30,7 +34,58 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aboxyn.pl">
 
-    <!-- Preconnect to CDN for better performance -->
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <title>Aboxyn - System zarządzania zamówieniami e-commerce dla branży meblarskiej</title>
+
+    <!-- Schema.org structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Aboxyn",
+      "description": "System do zarządzania zamówieniami e-commerce dla firm meblarskich. Automatyzacja wysyłki dzięki szablonom paczek, integracje z marketplace i kurierami.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based",
+      "url": "https://aboxyn.pl",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "PLN",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/PreOrder",
+        "description": "14 dni za darmo"
+      },
+      "featureList": [
+        "Szablony paczek z automatycznymi wymiarami i wagą",
+        "Integracje marketplace: Allegro, Erli, Shopify",
+        "Integracje kurierskie: InPost, DPD, Geis",
+        "Automatyczne generowanie i podpinanie faktur (Fakturownia)",
+        "Moduł magazynowy z obsługą skanerów kodów",
+        "Zarządzanie zamówieniami formatek u dostawców"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Firmy z branży meblarskiej"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aboxyn",
+      "url": "https://aboxyn.pl",
+      "logo": "https://aboxyn.pl/favicon.svg",
+      "description": "System zarządzania zamówieniami e-commerce dla branży meblarskiej",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
 
@@ -99,7 +154,8 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
                     <!-- Logo SVG -->
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Aboxyn">
+                        <title>Aboxyn - System zarządzania zamówieniami e-commerce</title>
                         <rect x="4" y="4" width="14" height="14" rx="2" fill="#9333ea" opacity="0.9"/>
                         <rect x="22" y="4" width="14" height="14" rx="2" fill="#9333ea" opacity="0.6"/>
                         <rect x="4" y="22" width="14" height="14" rx="2" fill="#9333ea" opacity="0.6"/>
@@ -116,18 +172,18 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="pt-32 pb-20 hero-gradient">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full mb-8">
-                        <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm font-medium text-primary-700">Wkrótce dostępne dla branży meblarskiej</span>
-                    </div>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-gradient" itemscope itemtype="https://schema.org/WebPageElement">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full mb-8">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm font-medium text-primary-700">Wkrótce dostępne dla branży meblarskiej</span>
+                </div>
 
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                        System do wysyłki mebli <span class="text-primary-600">jednym kliknięciem</span>
-                    </h1>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight" itemprop="headline">
+                    Wysyłaj meble <span class="text-primary-600">jednym kliknięciem</span>
+                </h1>
 
                     <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                         System zarządzania zamówieniami e-commerce stworzony dla firm meblarskich.
@@ -576,18 +632,18 @@
                 </div>
 
                 <div class="mt-16 max-w-3xl mx-auto text-center">
-                    <div class="bg-white p-8 rounded-2xl border-2 border-primary-200">
-                        <p class="text-lg text-gray-700 mb-4">
-                            <span class="font-bold text-primary-600">Nie jesteś z branży meblarskiej?</span>
-                        </p>
-                        <p class="text-gray-600">
-                            Aboxyn jest zoptymalizowany pod meble, ale może działać dla każdego, kto wysyła
-                            powtarzalne produkty o znanych wymiarach i wadze. Skontaktuj się – sprawdzimy czy pasujemy.
-                        </p>
-                    </div>
+                <div class="bg-white p-8 rounded-2xl border-2 border-primary-200">
+                    <p class="text-lg text-gray-700 mb-4">
+                        <span class="font-bold text-primary-600">Nie jesteś z branży meblarskiej?</span>
+                    </p>
+                    <p class="text-gray-600">
+                        Aboxyn jest zoptymalizowany pod meble, ale może działać dla każdego, kto wysyła
+                        powtarzalne produkty o znanych wymiarach i wadze. Skontaktuj się – sprawdzimy czy pasujemy.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Social Proof / Stats Section -->
         <section class="py-20 bg-white">
@@ -624,15 +680,17 @@
                     </p>
 
                     <!-- Waitlist Form -->
-                    <form id="waitlistForm" class="max-w-md mx-auto">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <input
-                                type="email"
-                                id="emailInput"
-                                placeholder="Twój adres e-mail"
-                                required
-                                class="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-purple-300"
-                            />
+                <form id="waitlistForm" class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input
+                            type="email"
+                            id="emailInput"
+                            name="email"
+                            placeholder="Twój adres e-mail"
+                            aria-label="Adres e-mail"
+                            required
+                            class="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-purple-300"
+                        />
                             <button
                                 type="submit"
                                 class="px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"

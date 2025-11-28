@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://aboxyn.pl/sitemap.xml
+
+# Crawl-delay (optional, set to 1 second)
+Crawl-delay: 1
+
