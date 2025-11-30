@@ -149,7 +149,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         .hero-gradient {
-            background: linear-gradient(180deg, rgba(147, 51, 234, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(180deg, rgba(147, 51, 234, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
         }
 
         @keyframes fade-in {
@@ -158,6 +158,21 @@
         }
         .animate-fade-in {
             animation: fade-in 0.3s ease-out forwards;
+        }
+
+        /* Dodatkowe style dla lepszego kontrastu */
+        .section-light {
+            background: linear-gradient(to bottom, #f9fafb 0%, #f3f4f6 100%);
+        }
+
+        .section-white {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .killer-badge {
+            background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%);
+            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.25);
         }
     </style>
 </head>
@@ -235,7 +250,7 @@
         </section>
 
         <!-- Problem Section -->
-        <section class="py-20 bg-gray-50">
+        <section class="py-20 section-light">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -247,7 +262,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -259,7 +274,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
@@ -271,7 +286,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
@@ -287,11 +302,11 @@
         </section>
 
         <!-- Killer Feature Section -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gradient-to-b from-primary-50 to-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
-                    <div class="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
-                        ⚡ Killer Feature
+                    <div class="inline-block mb-6">
+                        <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">★ Główna funkcja</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Szablony paczek – wysyłka <span class="text-primary-600">jednym kliknięciem</span>
@@ -302,7 +317,7 @@
                     </p>
 
                     <div class="grid md:grid-cols-3 gap-8 mt-16">
-                        <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-md">
                             <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                                 <svg class="w-7 h-7 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -312,7 +327,7 @@
                             <p class="text-gray-600">System sam wypełnia wszystkie dane na podstawie szablonu produktu</p>
                         </div>
 
-                        <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-md">
                             <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                                 <svg class="w-7 h-7 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -322,7 +337,7 @@
                             <p class="text-gray-600">Dane zawsze poprawne, bo zostały zdefiniowane raz i działają za każdym razem</p>
                         </div>
 
-                        <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-md">
                             <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                                 <svg class="w-7 h-7 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -340,7 +355,7 @@
         </section>
 
         <!-- Features/Modules Section -->
-        <section class="py-20 bg-gray-50">
+        <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -353,7 +368,7 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- Feature 1 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -380,7 +395,7 @@
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
@@ -407,7 +422,7 @@
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -434,7 +449,7 @@
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
@@ -461,7 +476,7 @@
                     </div>
 
                     <!-- Feature 5 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
@@ -488,7 +503,7 @@
                     </div>
 
                     <!-- Feature 6 -->
-                    <div class="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
@@ -518,7 +533,7 @@
         </section>
 
         <!-- How it Works Section -->
-        <section id="jak-dziala" class="py-20 bg-white">
+        <section id="jak-dziala" class="py-20 section-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -534,7 +549,7 @@
                         <!-- Step 1 -->
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-xl">
                                     1
                                 </div>
                             </div>
@@ -550,7 +565,7 @@
                         <!-- Step 2 -->
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-xl">
                                     2
                                 </div>
                             </div>
@@ -566,7 +581,7 @@
                         <!-- Step 3 -->
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+                                <div class="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-xl">
                                     3
                                 </div>
                             </div>
@@ -594,7 +609,7 @@
         </section>
 
         <!-- Target Audience Section -->
-        <section class="py-20 bg-gray-50">
+        <section class="py-20 section-light">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -606,7 +621,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -619,7 +634,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
@@ -632,7 +647,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
@@ -661,19 +676,19 @@
     </section>
 
         <!-- Social Proof / Stats Section -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
                     <div class="grid md:grid-cols-3 gap-12 text-center">
-                        <div>
+                        <div class="bg-white p-8 rounded-2xl shadow-md">
                             <div class="text-5xl font-bold text-primary-600 mb-2">do 95%</div>
                             <div class="text-gray-600 font-medium">mniej czasu na wysyłkę</div>
                         </div>
-                        <div>
+                        <div class="bg-white p-8 rounded-2xl shadow-md">
                             <div class="text-5xl font-bold text-primary-600 mb-2">0</div>
                             <div class="text-gray-600 font-medium">błędów w wymiarach paczek</div>
                         </div>
-                        <div>
+                        <div class="bg-white p-8 rounded-2xl shadow-md">
                             <div class="text-5xl font-bold text-primary-600 mb-2">1</div>
                             <div class="text-gray-600 font-medium">kliknięcie do wysyłki</div>
                         </div>
