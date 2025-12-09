@@ -1,7 +1,7 @@
 {
   "name": "Aboxyn",
   "short_name": "Aboxyn",
-  "description": "System zarządzania zamówieniami e-commerce dla branży meblarskiej",
+  "description": "System zarządzania zamówieniami e-commerce dla sklepów z elektroniką, RTV, AGD i GSM",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

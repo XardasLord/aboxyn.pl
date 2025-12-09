@@ -1,6 +1,6 @@
 # Aboxyn - Landing Page
 
-Nowoczesny landing page dla Aboxyn - systemu zarządzania zamówieniami e-commerce dla branży meblarskiej.
+Nowoczesny landing page dla Aboxyn - systemu zarządzania zamówieniami e-commerce dla sklepów z elektroniką, RTV, AGD i GSM.
 
 ## 🚀 Funkcje
 
