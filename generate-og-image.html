@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OG Image - Aboxyn</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #canvas {
+            border: 2px solid #9333ea;
+            box-shadow: 0 10px 40px rgba(147, 51, 234, 0.3);
+        }
+
+        .controls {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .info {
+            color: #9ca3af;
+            font-size: 14px;
+            text-align: center;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="630"></canvas>
+
+    <div class="controls">
+        <button onclick="downloadImage()">📥 Pobierz og-image.png</button>
+        <button onclick="regenerate()">🔄 Regeneruj</button>
+    </div>
+
+    <div class="info">
+        Obraz OG (Open Graph) w wymiarach 1200x630px.<br>
+        Kliknij "Pobierz og-image.png" i zapisz plik jako <strong>og-image.png</strong> w głównym katalogu projektu.
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+
+        function drawOGImage() {
+            // Gradient background (purple theme matching Aboxyn brand)
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#1e1b4b');
+            gradient.addColorStop(0.5, '#581c87');
+            gradient.addColorStop(1, '#9333ea');
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Add subtle pattern overlay
+            ctx.globalAlpha = 0.1;
+            for (let i = 0; i < 50; i++) {
+                ctx.fillStyle = 'white';
+                const x = Math.random() * 1200;
+                const y = Math.random() * 630;
+                const size = Math.random() * 3;
+                ctx.fillRect(x, y, size, size);
+            }
+            ctx.globalAlpha = 1;
+
+            // Add geometric shapes
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 2;
+
+            // Circle
+            ctx.beginPath();
+            ctx.arc(150, 150, 80, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Square
+            ctx.strokeRect(950, 400, 120, 120);
+
+            // Lines
+            ctx.beginPath();
+            ctx.moveTo(0, 200);
+            ctx.lineTo(300, 200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(900, 100);
+            ctx.lineTo(1200, 100);
+            ctx.stroke();
+
+            // Main content container
+            const contentX = 100;
+            const contentY = 200;
+
+            // Logo/Icon circle
+            const iconRadius = 60;
+            const iconX = contentX + iconRadius;
+            const iconY = contentY;
+
+            // Logo - Aboxyn (4 boxes grid like in favicon.svg)
+            const logoSize = 100;
+            const logoX = iconX - logoSize / 2;
+            const logoY = iconY - logoSize / 2;
+            const boxSize = 40;
+            const gap = 20;
+            const radius = 4;
+
+            // Helper function for rounded rectangles
+            function roundRect(ctx, x, y, width, height, radius) {
+                ctx.beginPath();
+                ctx.moveTo(x + radius, y);
+                ctx.lineTo(x + width - radius, y);
+                ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+                ctx.lineTo(x + width, y + height - radius);
+                ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+                ctx.lineTo(x + radius, y + height);
+                ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+                ctx.lineTo(x, y + radius);
+                ctx.quadraticCurveTo(x, y, x + radius, y);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            // Top-left box (bright)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            roundRect(ctx, logoX, logoY, boxSize, boxSize, radius);
+
+            // Top-right box (dimmed)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            roundRect(ctx, logoX + boxSize + gap, logoY, boxSize, boxSize, radius);
+
+            // Bottom-left box (dimmed)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            roundRect(ctx, logoX, logoY + boxSize + gap, boxSize, boxSize, radius);
+
+            // Bottom-right box (bright)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            roundRect(ctx, logoX + boxSize + gap, logoY + boxSize + gap, boxSize, boxSize, radius);
+
+            // Brand name - ABOXYN
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 120px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+            ctx.fillText('Aboxyn', contentX + 170, contentY + 30);
+
+            // Tagline
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.font = '36px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+            ctx.fillText('System zamówień e-commerce', contentX + 170, contentY + 90);
+
+            // Subtitle
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.font = '28px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+            ctx.fillText('dla sklepów z elektroniką, RTV, AGD i GSM', contentX + 170, contentY + 135);
+
+            // Integration logos at bottom
+            const integrationY = 520;
+
+            // Integration logos
+            drawIntegrationLogos(ctx, contentX, integrationY);
+
+            // Domain at bottom right
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.font = '24px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+            ctx.fillText('aboxyn.pl', 1050, 580);
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'og-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function regenerate() {
+            ctx.clearRect(0, 0, 1200, 630);
+            drawOGImage();
+        }
+
+        // Initial draw
+        drawOGImage();
+    </script>
+</body>
+</html>
+
